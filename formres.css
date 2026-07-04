@@ -1,0 +1,125 @@
+/* style.css */
+
+:root {
+  --primary-green: #B3D8A8;       /* Основной светло‑зелёный цвет фона */
+  --secondary-green: #8FBF85;    /* Чуть более насыщенный для акцентов */
+  --text-dark: #2C3E50;          /* Тёмный цвет текста */
+  --text-gray: #7F8C8D;           /* Серый для подсказок */
+  --bg-white: #FFFFFF;            /* Белый для карточек */
+  --border-color: #E0E0E0;        /* Цвет рамок */
+  --radius: 12px;                 /* Скругление углов */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--primary-green);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Верхняя плашка с иллюстрацией (как на фото) */
+.hero-banner {
+  background-color: var(--primary-green);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-banner h1 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  color: #1a3a2a;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.hero-banner p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #334f3d;
+}
+
+/* Контейнер для контента */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Карточка с результатами */
+.result-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.result-card h2 {
+  margin-top: 0;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--secondary-green);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Список результатов */
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+
+.result-list li {
+  background: #F9FAFB;
+  border-left: 5px solid var(--secondary-green);
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.result-list li strong {
+  color: var(--text-dark);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-list li span {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+/* Кнопка возврата (опционально) */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: var(--secondary-green);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #6B9A63;
+  transform: translateY(-2px);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 600px) {
+  .hero-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .result-card {
+    padding: 25px;
+  }
+}

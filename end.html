@@ -33,12 +33,15 @@
         <img class="rez__img" src="../../static/img/planet_bad.svg" alt="">
         <span>Ваш результат {{result}} кВт⋅ч</span>
         <span>Ваш дом имеет плохую энергоэффективности!</span>
+        <span>Хотите помочь экологии? Заполните форму и мы соберем вам экологичную сборку!</span>
+        <a href="{{ url_for('form') }}" class="main_link">Заполнить форму</a>
         {%endif%}
     </div>
+    
     {% endblock %}
   </main>
   <footer>
-
   </footer>
 </body>
 </html>
+

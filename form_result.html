@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/formres.css"> 
+    <title>Результаты формы</title>
+  </head>
+  <body>
+  {% block content %}
+    <header class="hero-banner">
+      <h1>Спасибо за заполнение формы!</h1>
+      <p>Ваши данные успешно получены. Мы свяжемся с вами в ближайшее время.</p>
+    </header>
+
+    <div class="container">
+      <article class="result-card">
+        <h2>Ваши данные</h2>
+        <ul class="result-list">
+          <li>
+            <strong>Ваше имя</strong>
+            <span>{{ name }}</span>
+          </li>
+          <li>
+            <strong>Ваша электронная почта</strong>
+            <span>{{ email }}</span>
+          </li>
+          <li>
+            <strong>Ваш адрес</strong>
+            <span>{{ address }}</span>
+          </li>
+          <li>
+            <strong>Дата приезда</strong>
+            <span>{{ date }}</span>
+          </li>
+          <li>
+            <strong>Удобное время</strong>
+            <span>{{ time }}</span>
+          </li>
+          <li>
+            <strong>Возраст</strong>
+            <span>{{ age }}</span>
+          </li>
+        </ul>
+
+        <a href="/form" class="back-btn">Заполнить ещё раз</a>
+      </article>
+    </div>
+  {% endblock %}
+</body>
+
+</html>
+
